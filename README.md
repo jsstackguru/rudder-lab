@@ -7,18 +7,16 @@
 **Long answer:** Rudder is a platform for collecting, storing and routing customer event data to dozens of tools. Rudder is open-source, can run in your cloud environment (AWS, GCP, Azure or even your data-centre) and provides a powerful transformation framework to process your event data on the fly.
 
 Rudder runs as a single go binary with Postgres. It also needs the destination (e.g. GA, Amplitude) specific transformation code which are node scripts. This repo contains the core backend and the transformation modules of Rudder. 
-The client SDKs are in a separate rep [Rudder Client SDKs](https://github.com/rudderlabs/rudder-client).  We will open source the UI code soon.
+The client SDKs are in a separate rep [Rudder Client SDKs](https://github.com/rudderlabs/rudder-client).  I will open source the UI code soon.
 
 
 Rudder server is released under [SSPL License](https://www.mongodb.com/licensing/server-side-public-license)
 
 Please register here https://app.rudderlabs.com and follow the instructions below to setup Rudder.
 
-Questions? Join our [Discord](https://discordapp.com/invite/xNEdEGw) or [Slack](https://rudderlabs.herokuapp.com/) channel. Or please email soumyadeb at rudderlabs.com. 
-
 # Why Rudder ?
 
-We are building Rudder because we believe open-source and cloud-prem is important for three main reasons
+I am building Rudder because I believe open-source and cloud-prem is important for three main reasons
 
 1. **Privacy & Security:** You should be able to collect and store your customer data without sending everything to a 3rd party vendor or embedding proprietary SDKs. With Rudder, the event data is always in your control. Besides, Rudder gives you fine-grained control over what data to forward to what analytical tool.
 
@@ -35,10 +33,6 @@ We are building Rudder because we believe open-source and cloud-prem is importan
 5. High performance. On a single m4.2xlarge, Rudder can process ~3K events/sec. Performance numbers on other instance types soon.
 6. Rich UI written in react.
 7. Android, iOS, Unity & Javascript SDKs. Server-side SDKs coming soon.
-
-# Get Involved 
-
-Join our [Discord](https://discordapp.com/invite/xNEdEGw) or [Slack](https://rudderlabs.herokuapp.com/) channel
 
 # Setup Instructions (Docker)
 
@@ -105,15 +99,15 @@ The UI to configure the sources, destinations etc. It consists of
 
 ## Rudder Data Plane
 
-Data plane is our core engine that receives the events, stores, transforms them and reliably delivers to the destinations. This engine can be customized to your business requirements by a wide variety of configuration options. Eg. You can choose to enable backing up events to an S3 bucket, the maximum size of the event for the server to reject malicious requests. Sticking to defaults will work well for most of the companies but you have the flexibility to customize the data plane.
+Data plane is my core engine that receives the events, stores, transforms them and reliably delivers to the destinations. This engine can be customized to your business requirements by a wide variety of configuration options. Eg. You can choose to enable backing up events to an S3 bucket, the maximum size of the event for the server to reject malicious requests. Sticking to defaults will work well for most of the companies but you have the flexibility to customize the data plane.
 
-The data plane uses Postgres as the store for events. We built our streaming framework on top of Postgres – that’s a topic for a future blog post. Reliable delivery and order of the events are the first principles in our design.
+The data plane uses Postgres as the store for events. I built my streaming framework on top of Postgres – that’s a topic for a future blog post. Reliable delivery and order of the events are the first principles in my design.
 
 ## Rudder Destination Transformation
 
 Conversion of events from Rudder format into destination-specific format is handled by the transformation module. The transformation codes are written in Javascript. I
 
-The following blogs provide an overview of our transformation module
+The following blogs provide an overview of my transformation module
 
 https://rudderlabs.com/transformations-in-rudder-part-1/
 
